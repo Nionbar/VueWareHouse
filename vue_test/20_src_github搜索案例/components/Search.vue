@@ -8,6 +8,7 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
         name:'Search',
         data(){
@@ -17,9 +18,8 @@
         },
         methods:{
             searchUserName(){
-                console.log(this)
                 this.$bus.$emit('updataUserList',{isFirst:false,isLoading:true,errorMsg:'',userList:[]})
-                this.$http.get(`https://api.github.com/search/users?q=${this.searchMsg}`).then(
+                axios.get(`https://api.github.com/search/users?q=${this.searchMsg}`).then(
                     response => {
                         this.$bus.$emit('updataUserList',{isLoading:false,errorMsg:'',userList:response.data.items})
                     },
