@@ -8,7 +8,11 @@
 <script>
     export default {
         name:'Category',
-        props:['title','listData']
+        props:['title','listData'],
+        created(){
+            console.log('我是创建钩子');
+        },
+
     }
 </script>
 
@@ -21,5 +25,5 @@
     h3{
         text-align: center;
         background-color:orange;
-    }
+    }   
 </style>
