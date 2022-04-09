@@ -1,19 +1,14 @@
 <template>
   <div class="categroy">
       <h3>{{title}}</h3>
-      <slot :game="games">未加载</slot>    
+        <slot >我是默认值，当用户没有指定时我会出现！</slot>       
   </div>
 </template>
 
 <script>
     export default {
         name:'Category',
-        props:['title'],
-        data(){
-            return {
-                games:['CSGO','英雄联盟','地下城与勇士','弹弹堂'],
-            }
-        }
+        props:['title']
     }
 </script>
 
