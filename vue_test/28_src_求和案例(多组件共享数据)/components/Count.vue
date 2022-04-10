@@ -1,6 +1,7 @@
 <template>
   <div>
       <h1>当前的和为：{{sum}}</h1>
+      <h1>当前的和乘10为：{{bigSum}}</h1>
       <select v-model="n">
           <option :value="1">1</option>
           <option :value="2">2</option>
@@ -10,11 +11,12 @@
       <button @click="encrement(n)">-</button>
       <button @click="incrementOdd(n)">当和为奇数时加</button>
       <button @click="incrementWait(n)">等一等再加</button>
+      <h3 style="color:red">Person组件中的人生为{{persons.length}}</h3>
   </div>
 </template>
 
 <script>
-    import {mapState,mapGetters,mapActions} from 'vuex'
+    import {mapState,mapGetters,mapActions,mapMutations} from 'vuex'
     export default {
         name:'Count',
         data(){
@@ -22,11 +24,25 @@
                 n:1,
             }
         },
-        computed:{
-            ...mapState('Count',['sum']),
+        methods: {           
+            // 数组写法
+            ...mapActions([
+                'incrementOdd',
+                'incrementWait'
+            ]),
+            ...mapMutations([
+                'increment',
+                'encrement'
+            ])
+
         },
-        methods:{
-            ...mapActions('Count',['increment','encrement','incrementOdd','incrementWait']),
+        computed:{
+            // 数组写法
+            // 使用mapState
+            ...mapState(['sum','persons']),
+            // 使用mapGetters
+            ...mapGetters(['bigSum']),
+
         },
         watch:{
             sum:{

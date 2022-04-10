@@ -1,6 +1,7 @@
 <template>
   <div>
       <h1>当前的和为：{{sum}}</h1>
+      <h1>当前的和乘10为：{{bigSum}}</h1>
       <select v-model="n">
           <option :value="1">1</option>
           <option :value="2">2</option>
@@ -24,6 +25,7 @@
         },
         computed:{
             ...mapState('Count',['sum']),
+            ...mapGetters('Count',['bigSum']),
         },
         methods:{
             ...mapActions('Count',['increment','encrement','incrementOdd','incrementWait']),
