@@ -1,6 +1,7 @@
 <template>
   <div>
-      <h1>当前的和为：{{this.$store.state.sum}}</h1>
+      <h1>当前的和为：{{$store.state.sum}}</h1>
+      <h1>当前的和乘10为：{{$store.getters.bigSum}}</h1>
       <select v-model="n">
           <option :value="1">1</option>
           <option :value="2">2</option>
@@ -14,6 +15,7 @@
 </template>
 
 <script>
+    import {mapState,mapGetters,mapActions} from 'vuex'
     export default {
         name:'Count',
         data(){
@@ -34,6 +36,29 @@
             incrementWait(){
                 this.$store.dispatch('incrementWait',this.n)
             }
+        },
+        computed:{
+            //程序员手动写法
+            // bigSum(){
+            //     return this.$store.getters.bigSum
+            // },
+            // sum(){
+            //     return this.$store.state.sum
+            // }
+            // *************************************************
+
+            // 对象写法 
+            // ...mapState({sum:'sum'}),
+            // ...mapGetters({bigSum:'bigSum'})
+
+            // *************************************************
+
+            // 数组写法
+            // 使用mapState
+            ...mapState(['sum']),
+            // 使用mapGetters
+            ...mapGetters(['bigSum']),
+
         }
     }
 </script>
