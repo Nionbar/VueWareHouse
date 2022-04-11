@@ -13,8 +13,6 @@
                     title:m.title  
                 }
             }">{{m.title}}</router-link>
-            <button @click="pushShow(m)">push</button>
-            <button @click="replaceShow(m)">replace</button>
         </li>
     </ul>
     <hr>
@@ -31,26 +29,6 @@
                     {id:"002",title:'message002'},
                     {id:"003",title:'message003'},
                 ]
-            }
-        },
-        methods:{
-            pushShow(m){
-                this.$router.push({
-                    name:'detail',
-                    query:{
-                        id:m.id,
-                        title:m.title
-                    }
-                })
-            },
-            replaceShow(m){
-                this.$router.replace({
-                    name:'detail',
-                    query:{
-                        id:m.id,
-                        title:m.title
-                    }
-                })
             }
         }
     }
