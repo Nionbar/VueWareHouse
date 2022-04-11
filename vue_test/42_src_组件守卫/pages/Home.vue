@@ -18,7 +18,15 @@
 
 <script>
     export default {
-        name:'Home'
+        name:'Home',
+        beforeRouteEnter(to,from,next){
+            console.log('我叫小沈阳',to,from,next);
+            next();
+        },
+        beforeRouteLeave(to,from,next){
+            console.log('beforeRouteLeave');
+            next();
+        }
     }
 </script>
 

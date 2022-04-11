@@ -6,6 +6,7 @@ import Messages from '../pages/Message'
 import News from '../pages/News'
 import Detail from '../pages/Detail'
 const router =  new VueRouter({
+    mode:'history',
     routes:[
         {
             path:'/about',
@@ -15,7 +16,7 @@ const router =  new VueRouter({
         {
             path:'/home',
             component:Home,
-            meta:{title:"主页"},
+            meta:{title:"主页",isAuth:true},
             children: [
                 {
                     path:'message',
@@ -62,12 +63,12 @@ const router =  new VueRouter({
         }
     ],
 })
-router.afterEach((to,from)=>{
-    console.log('to:',to,'from',from)
-    if(to.meta.title){
-        document.title = to.meta.title
-    }else{
-        document.title = 'Nionbar'
-    }
-})
+// router.afterEach((to,from)=>{
+//     // console.log('to:',to,'from',from)
+//     if(to.meta.title){
+//         document.title = to.meta.title
+//     }else{
+//         document.title = 'Nionbar'
+//     }
+// })
 export default router
