@@ -10,12 +10,12 @@
     export default {
         name:'News',
         activated(){
-            console.log('News active');
+            console.log('News被激活了！')
         },
         deactivated(){
-            console.log('News deactive');
+            console.log('News失活了！')
         }
-    }   
+    }
 </script>
 
 <style>

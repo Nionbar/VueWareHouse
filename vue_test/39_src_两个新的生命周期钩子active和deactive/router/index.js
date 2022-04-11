@@ -5,22 +5,19 @@ import Home from '../pages/Home'
 import Messages from '../pages/Message'
 import News from '../pages/News'
 import Detail from '../pages/Detail'
-const router =  new VueRouter({
+export default new VueRouter({
     routes:[
         {
             path:'/about',
-            component:About,
-            meta:{title:"关于"}
+            component:About
         },
         {
             path:'/home',
             component:Home,
-            meta:{title:"主页"},
             children: [
                 {
                     path:'message',
                     component:Messages,
-                    meta:{title:"信息"},
                     children:[
                         {
                             name:'detail',
@@ -38,36 +35,15 @@ const router =  new VueRouter({
                                     title:$route.query.title,
                                     id:$route.query.id
                                 }
-                            },
-                            meta:{title:"详情"}
+                            }
                         }
                     ]
                 },
                 {
                     path:'news',
-                    component:News,
-                    meta:{title:"新闻"},
-                    beforeEnter:(to,from,next)=>{
-                        console.log('name:',from.meta.title);
-                        if(from.meta.title === '信息'){
-                            alert('不能从信息页面进入新闻页面')
-                            next(false)
-                        }
-                        else{
-                            next()
-                        }
-                    }
+                    component:News
                 }
             ]
         }
     ],
 })
-router.afterEach((to,from)=>{
-    console.log('to:',to,'from',from)
-    if(to.meta.title){
-        document.title = to.meta.title
-    }else{
-        document.title = 'Nionbar'
-    }
-})
-export default router

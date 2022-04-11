@@ -46,28 +46,31 @@ const router =  new VueRouter({
                 {
                     path:'news',
                     component:News,
-                    meta:{title:"新闻"},
-                    beforeEnter:(to,from,next)=>{
-                        console.log('name:',from.meta.title);
-                        if(from.meta.title === '信息'){
-                            alert('不能从信息页面进入新闻页面')
-                            next(false)
-                        }
-                        else{
-                            next()
-                        }
-                    }
+                    meta:{isAuth:true,title:"新闻"}
                 }
             ]
         }
     ],
 })
-router.afterEach((to,from)=>{
-    console.log('to:',to,'from',from)
-    if(to.meta.title){
-        document.title = to.meta.title
+
+//全局前置路由守卫 ---------------- 初始化||每次路由切换都会执行
+router.beforeEach((to,from,next)=>{
+    // console.log('to:',to,'from',from)
+    if(to.meta.isAuth){//判断是否需要鉴权
+        if(localStorage.getItem('user') === 'nionbar'){
+            next()
+        }
+        else{
+            alert('请先登录')
+        }
     }else{
-        document.title = 'Nionbar'
+        next()
     }
 })
+
+//后置路由守卫 ---------------- 初始化||每次路由切换都会执行
+router.afterEach((to)=>{
+    document.title = to.meta.title || 'Nionbar'
+})
+
 export default router

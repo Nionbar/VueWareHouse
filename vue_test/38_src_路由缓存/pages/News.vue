@@ -8,14 +8,8 @@
 
 <script>
     export default {
-        name:'News',
-        activated(){
-            console.log('News active');
-        },
-        deactivated(){
-            console.log('News deactive');
-        }
-    }   
+        name:'News'
+    }
 </script>
 
 <style>
