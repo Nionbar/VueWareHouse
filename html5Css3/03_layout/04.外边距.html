@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            外边距的折叠
+                兄弟元素
+                    两者绝对值的较大值
+                父子元素
+                    子元素的外边距会传递给父元素（上外边距）
+                    会影响到布局（需要解决）
+        */
+        .box1,.box2{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: #f00;
+            margin-bottom: 100px;
+        }
+        .box2{
+            background-color: #0f0;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+
+    </div>
+</body>
+</html>

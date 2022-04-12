@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            子元素的总宽度必须等于父元素内容区的宽度即
+            子元素(margin.left+margin.right+padding.left+padding.right+width) = 父元素内容区(width)
+            如果不满足那么浏览器会自动填充子元素的margin.right值以达到上述等式成立
+            如果某个值为auto则会调整auto的那个值使等式chneg成立
+        */
+
+        /* 
+            overflow属性设置子元素的显示区域
+                visible: 显示溢出内容
+                hidden: 益处部分隐藏
+                scroll: 益处部分通过滚动条查看
+        */
+        .father{
+            width: 800px;
+            height: 400px;
+            background-color: #bfa;
+            /* padding-top: 20px; */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+            background-color: #bbc;
+            margin-top:300px;
+        }   
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

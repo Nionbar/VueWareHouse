@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            width和height设置的区域是内容区域，不是整个盒子
+            boder（边框）
+                边框的宽度 border-width
+                边框的颜色 border-color
+                边框的类型 border-style
+                    solid : 实线;
+                    dotted: 点线;
+                    double: 双线;
+                    默认值：none 无边框
+            marrage 外边框（不可见）
+                两个盒子外边距会合并 如果两个盒子的外边距都为50px 那么两个盒子的外边距也为50px
+        */
+        .box1{
+            /* border-width: 20px;
+            border-color: #bac;
+            border-style: solid; */
+            border:1px solid #fbc;
+            width:200px;
+            height:200px;
+            background-color:#bfa;
+            padding:20px;
+            margin:50px;
+        }
+        .box2{
+            background-color:#bbc;
+            margin:50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        盒子模型：
+            定义：
+                CSS将页面中的所有元素都设置为一个矩形的盒子
+                每个盒子都有以下几部分组成
+                    内容区  （content）
+                    内边距  （padding）
+                    边框    （border）
+                    外边距  （margin）
+            常用：
+                定义一个盒子，并且设置它的宽高，再设置它的内容，就可以实现盒子模型了。
+     -->
+     <div class="box1">我是你爸爸</div>
+     <div class="box2">我是你爷爷</div>
+</body>
+</html>

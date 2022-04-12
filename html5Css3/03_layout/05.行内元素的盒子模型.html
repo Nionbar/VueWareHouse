@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width:200px;
+            height:200px;
+            background-color:#bfa;
+        }
+
+        .box2{
+            /* 
+                1.行内元素不能设置width和height
+                2.可以设置padding margin 和border
+                3.行内元素的盒子模型的外边距不会合并
+            */
+            width:200px;
+            height:200px;
+            background-color:#bbc;
+            margin:0 20px;
+        }
+        a{
+            /* 
+                display 用来设置元素的类型
+                    inline 行内元素
+                    block  块级元素
+                    inline-block 行内元素和块级元素
+                        兼具两者优点（可以设置宽和高 同时不会独占一行）
+                        也兼具两个缺点
+                    table 表格元素
+                    none 不显示
+
+                visibility 用来设置元素的可见性
+                    visible 可见
+                    hidden 不可见（但是依然占据着页面的位置）
+                    collapse 折叠
+                    inherit 继承
+            */
+            display:block;
+            visibility:hidden;
+            width:200px;
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+     <div  class="box1">我是你爸爸</div>
+     <span class="box2">我是你爷爷</span>
+     <span class="box2">我是你爷爷</span>
+</body>
+</html>
