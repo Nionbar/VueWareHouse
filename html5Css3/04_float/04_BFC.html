@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  BFC:块级格式化环境
+                1.开启BFC的元素不会被浮动元素所覆盖
+                2.开启BFC的元素子元素和父元素的外边距不会重叠
+                3.开启BFC的元素可以包含浮动的子元素 
+            BFC:开启BFC的方法
+                1.设置元素的浮动
+                2.将元素设置为行内块元素
+                3.将元素overflow设置为一个非visible的值（hidden，auto）*/
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box1{
+            background-color:#ff0;
+            /* 开启BFC */
+            overflow: hidden;
+        }
+        .box2{
+            width:200px;
+            height:200px;
+            margin-top:50px;
+            background-color:#0ff;
+        }       
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+    </div>
+</body>
+</html>

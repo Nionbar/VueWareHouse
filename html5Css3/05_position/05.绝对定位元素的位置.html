@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            当绝对定位的元素想要水平居中时不能直接margin:0 auto; 必须将left和right设置为0；
+            同时可实现垂直居中需要margin:auto 0;加上top和bottom都为0
+        */
+        .box1{
+            width:600px;
+            height: 600px;
+            background-color:#faa;
+            position: absolute;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color:#bfa;
+            position: absolute;
+            margin:auto auto;
+            left: 0;
+            right: 0;
+            top:0;
+            bottom: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

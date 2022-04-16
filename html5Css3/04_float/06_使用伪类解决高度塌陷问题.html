@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box2,.box3{
+            width:200px;
+            height:200px;
+        }
+        .box1{
+            border:1px solid #f00;
+        }
+        .box2{
+            float:left;
+            background-color:#faa;
+        }
+        /* 
+            利用伪类解决高度塌陷问题
+                1.在父元素最后田间一个::after伪元素
+                2.将伪元素设置为块元素
+                3.设置伪元素的clear属性为both
+        */
+        .box::after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+        /* 
+            li
+        */
+        /* .box3{
+            clear:both;
+            background-color:#c5a;
+        } */
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+        <!-- <div class="box3">
+
+        </div> -->
+    </div>
+</body>
+</html>

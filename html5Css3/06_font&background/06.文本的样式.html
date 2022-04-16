@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: 1px solid red;
+            width: 200px;
+            /* 
+                white-space(设置空白区域)
+                    normal 换行(默认值)
+                    nowrap 不换行
+                    pre 保留空白
+            */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .upup{
+            /* 
+                vertical-align(垂直对齐方式)
+                    top 上对齐
+                    middle 中间对齐
+                    bottom 下对齐
+                    baseline 基线对齐
+            */
+            font-size: 5px;;
+            vertical-align:top;    
+        }
+    </style>
+</head>
+<body>
+    <div>
+        x <span class="upup">2</span>
+    </div>
+    <div class="box1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptates placeat rem possimus, itaque, labore harum nesciunt repellat qui quia deserunt earum eligendi quam illo animi assumenda porro vitae eveniet!
+    </div>
+    <div class="box1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptates placeat rem possimus, itaque, labore harum nesciunt repellat qui quia deserunt earum eligendi quam illo animi assumenda porro vitae eveniet!
+    </div>
+    <div class="box1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptates placeat rem possimus, itaque, labore harum nesciunt repellat qui quia deserunt earum eligendi quam illo animi assumenda porro vitae eveniet!
+    </div>
+    <div class="box1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptates placeat rem possimus, itaque, labore harum nesciunt repellat qui quia deserunt earum eligendi quam illo animi assumenda porro vitae eveniet!
+    </div>
+</body>
+</html>

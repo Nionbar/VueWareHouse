@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            定位（position）
+                通过定位可以将页面元素摆放到任意位置
+
+            定位的属性：
+                static  :默认值，元素静止不开启定位
+                relative:相对定位，元素相对于父元素定位
+                absolute:绝对定位，元素相对于文档定位
+                fixed   :固定定位，元素相对于窗口定位
+                sticky  :粘性定位，元素相对于窗口定位，但是当页面滚动时，元素会固定在原来的位置
+
+            相对定位（position:relative）
+                1.元素开启相对定位，如果不设置偏移量不会发生变化
+                    偏移量：
+                        top:相对于上边元素的水平距离
+                        bottom:相对于下边元素水平距离
+                        left:相对于左边元素水平距离
+                        right:相对于右元素水平距离
+                2.相对定位是相对于元素所在文档流位置定位
+                    即（0，0）点是该元素的左上角    
+                3.相对定位会提高原元素的层次
+                4.相对定位不会脱离文档流
+                5.相对定位不会影响原元素的性质
+        */
+        *{
+            margin:0;
+            padding:0;
+            font-size:50px;
+        }
+        .box1,.box2,.box3{
+            width:200px;
+            height:200px;
+        }
+        .box1{
+            background-color:#faa;
+        }
+        .box2{
+            position:relative;
+            top:-200px;
+            left:200px;
+            background-color:#bfa;
+        }
+        .box3{
+            background-color:#c5a;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

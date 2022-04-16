@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            当没开启层级时：总会先显示位置靠后位置的元素
+
+            当开启层级后：显示顺序按照z-index的值从大到小依次显示，没设置z-index默认z-index为0
+                父元素的层次即使比子元素高也不会遮盖子元素
+        */
+            .box1,.box2,.box3{
+                width:  200px;
+                height: 200px;
+                position: absolute;
+                font-size:50px;
+            }
+            .box1{
+                background-color:#faa;
+                z-index:1;
+            }
+            .box2{
+                top:50px;
+                left: 50px;
+                background-color:rgba(72, 148, 53, 0.5);
+            }
+            .box3{
+                top:100px;
+                left: 100px;
+                background-color:#ec6;
+                z-index:-1;
+            }
+            .box4{
+                width: 50px;
+                height: 50px;
+                background-color:#abba;
+                z-index:-100;
+            }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box4"></div>
+    </div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

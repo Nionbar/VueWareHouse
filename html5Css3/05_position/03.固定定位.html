@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    <style>
+        /* 
+            固定定位：
+                固定定位是一种特殊的绝对定位，其大部分特性与绝对定位一样
+                    唯一的是固定定位永远参考的视口定位
+        */
+        *{
+            margin:0;
+            padding:0;
+            font-size:50px;
+        }
+        .box1,.box2,.box3{
+            width:200px;
+            height:200px;
+        }
+        .box1{
+            width:600px;
+            height:10000px;
+            background-color:#faa;
+        }
+        .box2{
+            position:fixed;
+            background-color:#bfa;
+        }
+        .box3{
+            width:400px;
+            background-color:#c5a;
+        }
+    </style>
+<body>
+    <div class="box1">
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "id": "3331828",
+  "name": "Html",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "27637154",
+      "name": "pc",
+      "font_class": "pc",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "27637163",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "27637164",
+      "name": "视频会议",
+      "font_class": "shipinhuiyi",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "27637170",
+      "name": "自组网",
+      "font_class": "zizuwang",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "27637173",
+      "name": "智能头盔",
+      "font_class": "zhinengtoukui",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    }
+  ]
+}

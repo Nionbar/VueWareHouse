@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            /* 
+                background-image 设置背景图片
+                background-repeat 设置背景图片重复方式
+                    可选值：
+                        repeat    水平垂直方向都重复
+                        repeat-x  仅水平方向重复
+                        repeat-y  仅垂直方向重复
+                        no-repeat 不重复
+                background-position 设置背景图片的位置
+                    可选值：
+                        top left    左上角
+                        top center  上中间
+                        top right   右上角
+                        center left  中左边
+                        center center  中间
+                        center right  中右边
+                        bottom left  左下角
+                        bottom center  下中间
+                        bottom right  右下角
+            */
+            background-image: url(../image/xx1.png);
+            background-repeat: no-repeat;
+            /* background-position: center center; */
+            /* 
+                    background-clip
+                        可选值：
+                            border-box  边框
+                            padding-box 内边距
+                            content-box 内容
+                    background-origin
+                        可选值：
+                            border-box  边框
+                            padding-box 内边距
+                            content-box 内容
+                    background-size
+                        可选值：
+                            auto  自动
+                            cover 全屏
+                            contain 包含
+                    background-attachment
+                        可选值：
+                            scroll 滚动
+                            fixed  固定
+            */
+            background-origin: padding-box;
+            background-clip: content-box;
+            padding:10px;
+            border:10px red double;
+            /* 
+                background-color 设置背景颜色
+                background-image 设置背景图片
+                background-repeat 设置背景图片重复方式
+                background-position 设置背景图片的位置
+                background-origin 设置背景图片的位置
+                background-clip 设置背景图片显示区域
+                background-size 设置背景图片大小
+                background-attachment 设置背景图片在页面中的方式
+
+                
+            */
+        }
+    </style>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
