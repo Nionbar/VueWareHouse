@@ -1,0 +1,99 @@
+.header{
+    width: 100%;
+    height: 40px;
+    background-color:#333;
+}
+.header .container{
+    width:1226px;
+    height:40px;
+    line-height:40px;
+    margin:0 auto;
+    /* color:rgb(176,176,176); */
+    /* background-color:#bfa; */
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+.left-menu .line{
+    float:left;
+    width:1px;
+    height:13px;
+    margin:14px 7px 13px;
+    background-color:#424242;
+}
+.container a{
+    color:rgb(176,176,176);
+}
+.container a:hover{
+    color:rgb(255,255,255);
+}
+
+/* leftMenu */
+.left-menu li{
+    float: left;
+}
+.left-menu .app:hover .triangle{
+    display:block;
+}
+.left-menu .app:hover .qrcode{
+    display:block;
+}
+.triangle{
+    display: none;
+    width: 0;
+    height: 0;
+    border:10px solid #fff;
+    border-top:none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    position: relative;
+    top: -10px;
+    left:10px;
+    z-index: 1;
+}
+.qrcode{
+    display:none;
+    position:absolute;
+    top:40px;
+    left:860px;
+    width: 124px;
+    background-color:#fff;
+    line-height:1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.qrcode img{
+    width: 90px;
+    height: 90px;
+    margin:17px;
+}
+.qrcode span{
+    display: block;
+    font-size:14px;
+    margin:0 17px;
+    padding-bottom: 17px;
+    color:#424242;
+}
+/* ShopCar */
+.shopCar{
+    width:120px;
+    height: 40px;
+    float: right;
+    background-color:#424242;
+    color: #b0b0b0;
+    text-align: center;
+}
+
+/* rightMenu */
+.right-menu{
+    float:right;
+    padding-right:25px;
+}
+.right-menu li{
+    float: right;
+}
+.right-menu .line{
+    float: right;
+    width:1px;
+    height:13px;
+    margin:14px 7px 13px;
+    background-color:#424242;
+}

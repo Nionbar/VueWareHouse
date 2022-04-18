@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color:#bfa;
+        }
+        .box1:hover{
+            background-color:#f00;
+            width:300px;
+            /* 
+                过渡 transition;
+                     transition-function;
+                        ease: 默认值 线加速减速;
+                        linear: 线性过渡;
+                        ease-in: 线加速过渡;
+                        ease-out: 线减速过渡;
+                        ease-in-out: 线加速减速过渡;
+
+                    贝塞尔曲线
+                        cubic-bezier(x1,y1,x2,y2)
+                        x1:控制点x坐标;
+                        y1:控制点y坐标;
+                        x2:结束点x坐标;
+                        y2:结束点y坐标;
+
+                    分步
+                    steps(n)
+                        n:步长;
+
+                transition-delay:延迟时间;
+
+            */
+            transition: width 5s;
+            transition-timing-function: cubic-bezier(0.5,0,0.5,1);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 800px;
+        }
+        .container {
+            width: 200px;
+            height: 200px;
+            /* background-color: #bfa; */
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            animation: cube 20s linear infinite;
+        }
+        .container > div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            /* 为元素添加透明效果 */
+            opacity: 0.6;
+        }
+        .box1{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .box2{
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .box3{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .box4{
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .box5{
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        .box6{
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        .shadow{
+            width: 200px;
+            height: 0;
+        }
+        @keyframes cube{
+            from{
+                transform: rotateX(0deg) rotateZ(0deg);
+            }
+            to{
+                transform: rotateX(1turn) rotateZ(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"><img src="../image/8-10/1.jpg" alt=""></div>
+        <div class="box2"><img src="../image/8-10/2.jpg" alt=""></div>
+        <div class="box3"><img src="../image/8-10/3.jpg" alt=""></div>
+        <div class="box4"><img src="../image/8-10/4.jpg" alt=""></div>
+        <div class="box5"><img src="../image/8-10/5.jpg" alt=""></div>
+        <div class="box6"><img src="../image/8-10/6.jpg" alt=""></div>
+    </div>
+    <div class="shadow"></div>
+</body>
+</html>

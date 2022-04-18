@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            动画
+                animation: 动画名称 动画属性 动画时间 动画结束后的状态
+                animation-name: 动画名称
+                animation-duration: 动画时间
+                animation-timing-function: 动画属性
+                animation-delay: 动画延迟时间
+                animation-iteration-count: 动画重复次数
+                    infinite:无限重复
+                animation-direction: 动画方向
+                animation-fill-mode: 动画填充模式
+                animation-play-state: 动画播放状态
+                animation-delay: 动画延迟时间
+                animation-iteration-count: 动画重复次数
+                animation-direction: 动画方向
+                animation-fill-mode: 动画填充模式
+                animation-play-state: 动画播放状态
+                animation-delay: 动画延迟时间
+                animation-iteration-count: 动画重复次数
+                animation-direction: 动画方向
+                animation-fill-mode: 动画填充模式
+                animation-play-state: 动画播放状态
+                animation-delay: 动画延迟时间
+                animation-iteration-count: 动画重复次数
+                animation-direction: 动画方向
+                animation-fill-mode: 动画填充模式
+
+                关键帧
+                    关键帧：指定元素的一个特定时间点，可以指定元素的一个特定的位置，或者指定元素的一个特定的透明度，或者指定元素的一个特定的旋转角度。
+                    关键帧：
+                        keyframes 关键帧名称{
+                            0%{
+                                transform: translateX(0);
+                            }
+                            100%{
+                                transform: translateX(100px);
+                            }
+                        }
+                    关键帧：
+                        @keyframes 关键帧名称{
+                            0%{
+                                transform: translateX(0);
+                            }
+                            100%{
+                                transform: translateX(100px);
+                            }
+                        }
+        */
+        @keyframes tutu{
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: 1024px;
+            }
+        }
+        .box1{
+            background-color:#bfa;
+            width: 200px;
+            height: 200px;
+            animation-name: tutu;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

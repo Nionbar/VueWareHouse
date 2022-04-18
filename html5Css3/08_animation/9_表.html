@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clock{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 300px auto;
+            background-image: url(../image/bg3.jpg);
+            background-size: cover;
+            position: relative;
+        }
+        .clock > div{
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        /* hour */
+        .hour-wrapper{
+            width: 60%;
+            height: 60%;
+            z-index: 3;
+            animation:clock 196s linear infinite;
+            /* background-color: aqua; */
+        }
+        .hour{
+            width:8px;
+            height: 50%;
+            margin: 0 auto;
+            background-color: #000;
+            /* border-radius: 50%; */
+        }
+        /* min */
+        .min-wrapper{
+            width: 75%;
+            height: 75%;
+            z-index: 2;
+            animation:clock 36s steps(60) infinite;
+            /* background-color: aqua; */
+        }
+        .min{
+            width:6px;
+            height: 50%;
+            margin: 0 auto;
+            background-color: blue;
+        }
+        /* sec */
+        .sec-wrapper{
+            width: 85%;
+            height: 85%;
+            animation:clock 6s steps(60) infinite;
+            z-index: 1;
+            /* background-color: aqua; */
+        }
+        .sec{
+            width:4px;
+            height: 50%;
+            margin: 0 auto;
+            background-color: red;
+        }
+        /* 定义动画 */
+        @keyframes clock{
+            0%{
+                transform: rotateZ(0deg);
+            }
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hour-wrapper">
+            <div class="hour"></div>
+        </div>
+        <div class="min-wrapper">
+            <div class="min"></div>
+        </div>
+        <div class="sec-wrapper">
+            <div class="sec"></div>
+        </div>
+    </div>
+</body>
+</html>

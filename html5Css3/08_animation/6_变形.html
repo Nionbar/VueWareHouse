@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+        /* 
+            变形 transform
+             优点 不会影响别的元素
+        */
+        body{
+            background-color: rgb(240, 238, 238)
+        }
+        div{
+            float: left;
+            width: 200px;
+            height: 400px;
+            margin: 20px 10px;
+            background-color: #fff;
+            transition:transform 0.3s;
+        }
+        div:hover{
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

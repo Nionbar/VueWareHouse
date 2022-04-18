@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            弹性容器的样式
+                flex-direction: 排列方向
+                    row             默认值，自左向右
+                    row-reverse     自右向左
+                    column          自上向下
+                    column-reverse  自下向上
+            
+            弹性元素的样式
+                flex-grow 指定弹性元素的伸展系数
+                flex-shrink 指定弹性元素的收缩系数
+        */
+        ul{
+            margin:0;
+            padding:0;
+            border: 5px solid #000;
+            list-style: none;
+            display: flex;
+        }
+        ul li{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            flex-grow: 1;
+        }
+        li:nth-child(2){
+            background-color: rgb(255, 170, 203);
+            flex-grow: 4;
+        }
+        li:nth-child(3){
+            background-color: rgb(77, 188, 240);
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<!-- 
+    flex:弹性盒
+        是css中的有一种布局手段，他主要用来代替浮动来完成页面的布局
+        flex可以使元素具有弹性，让元素跟随页面大小的大小改变二改变
+
+        弹性容器
+            要使用弹性和必须先将一个元素设置为弹性容器
+            display:flex; 块级弹性容器
+            display:inline-flex; 内联弹性容器
+ -->
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

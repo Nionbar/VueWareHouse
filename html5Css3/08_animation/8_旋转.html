@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            默认情况下浏览器是不开启透视的，开启透视的徐在html标签内添加perspective属性
+        */
+        
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color:#bfa;
+            margin: 200px auto;
+            transition:transform 1s;
+            text-align: center;
+            padding-top:50px;
+        }
+        body{
+            perspective: 800px;
+            border: 1px solid red
+        }
+        .box1:hover{
+            transform: rotateY(-180deg) translateZ(-200px);
+            /* transform: translateZ(400px) rotateY(180deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">我是你爹</div>
+</body>
+</html>

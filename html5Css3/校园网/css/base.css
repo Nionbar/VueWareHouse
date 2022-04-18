@@ -1,0 +1,25 @@
+/* 
+    公共样式
+*/
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+    clear:both;
+}
+body{
+    color:#F7F9FA;
+    font-size: 14px;
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.active{
+    color:#4285D4;
+}
+.line{
+    height: 1px;
+    background-color:#d2d2d2;
+}
+a{
+    text-decoration: none;
+    color:#788185
+}

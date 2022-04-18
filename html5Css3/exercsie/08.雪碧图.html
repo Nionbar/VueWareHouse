@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            雪碧图的使用步骤：
+                1. 先确定要使用的图标
+                2. 测量图标大小
+                3. 根据测量结果创建一个元素
+                4. 将雪碧图设置为元素的背景图片
+                5. 设置偏移量
+        */
+        .box{
+            width: 46px;
+            height: 46px;
+            background-image: url(../image/portal.png);
+            background-position: 0 -82px;
+        }
+        .box:hover{
+            background-position-x: -46px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

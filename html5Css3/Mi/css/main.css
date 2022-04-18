@@ -1,0 +1,47 @@
+.main{
+    width:1226px;
+    background-color:red;
+    margin:20px auto;
+}
+
+.firstMenu{
+    margin-bottom: 15px;
+}
+/* left-nav */
+.firstMenu .left-nav{
+    float:left;
+    width: 234px;
+    height: 460px;
+    background-color:#959997;
+    color:#fff;
+}
+.nav-list{
+    float: left;
+    width: 234px;
+    margin:25px auto;
+}
+.nav-list li{
+    position: relative;
+    /* background-color:red; */
+    padding:0 30px;
+    overflow: hidden;
+    height: 41px;
+    line-height: 41px;
+}
+.nav-list li:hover{
+    background-color:#FF6700;
+}
+.nav-list li span{
+    float: left;
+}
+.nav-list li i{
+    float: right;
+    padding-top:12px;
+}
+/* diagram */
+.firstMenu .diagram{
+    float:right;
+    width: 992px;
+    height: 460px;
+    background-color:#ec26e2;
+}

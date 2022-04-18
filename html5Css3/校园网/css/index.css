@@ -1,0 +1,150 @@
+.header{
+    width: 100%;
+    height: 39px;
+    background-color: #f7f9fa;
+    border-bottom:1px solid #c2d0dc;
+    line-height:40px;
+}
+.container1{
+    width: 74%;
+    height: 40px;
+    margin: 0 auto;
+    color:#788185;
+}
+.leftNav{
+    float: left;
+}
+.leftNav .setting a:hover{
+    color:#6AB5EE;
+}
+.rightNav{
+    float: right;
+}
+.rightNav .selectNetwork,.rightNav .loginBtn{
+    float: left;
+}
+.rightNav .selectNetwork{
+    padding-right: 40px;
+}
+.selectNetwork{
+    width: 98px;
+}
+.selectNetwork:hover .networkList{
+    display: block;
+}
+.selectNetwork .networkList{
+    display: none;
+    background-color:#fff;
+    border: 1px solid #D2D2D2;
+}
+/* .networkList .line{
+    height: 1px;
+    width:98px;
+    background-color:#d2d2d2;
+}
+.networkList .active{
+    color:#4285D4;
+} */
+
+.loginBtn{
+    text-align: center;
+    width:139px;
+    height:40px;
+    line-height:40px;
+}
+.loginBtn a{
+    /* margin-left: 20px; */
+    display: block;
+    height:23px;
+    margin-top:8px;
+    text-decoration: none;
+    color:#fff;
+    background-image: url(../img/portal.png);
+    background-position: -168px -55px;
+}
+.loginBtn a:hover{
+    background-position: -168px -78px;
+}
+.loginBtn a span{
+    position: relative;
+    top:-8px;
+}
+
+
+.container2{
+    width: 74%;
+    margin: 30px auto;
+}
+.logo{
+    /* background-color: #bfa; */
+}
+.message{
+    width: 775px;
+    height: 325px;
+    margin: 0 auto;
+    margin-top:200px;
+    /* background-color: rgb(241, 41, 181); */
+}
+.title{
+    margin-bottom: 5px;
+}
+.title .hello{
+    font-size:40px;
+    color:#000;
+    margin-right:20px;
+}
+.title .tip{
+    font-size:25px;
+    color:rgb(117,117,117);
+}
+.mainMassage{
+    margin-top:30px;
+}
+.detailed ,.netWork ,.number{
+    float:left;
+    width: 189px;
+    margin-right:104px;
+    /* background-color: #000; */
+}
+.number{
+    margin-right:0;
+}
+.detailed .cirlar,.netWork .cirlar,.number .cirlar{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-image: url(../img/portal.png);
+}
+.detailed .cirlar{
+    background-position: 0 -129px;
+}
+.detailed .cirlar:hover{
+    background-position: -182px -129px;
+}
+.netWork .cirlar{
+    background-position: 0 -308px;
+}
+.netWork .cirlar:hover{
+    background-position: -182px -308px;
+}
+.number .cirlar{
+    background-position: 0 -488px;
+}
+.number .cirlar:hover{
+    background-position: -182px -488px;
+}
+.cirlar span{
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    line-height:180px;
+}
+.underMsg{
+    display:block;
+    width:180px;
+    /* background-color:#bfa; */
+    margin-top:20px;
+    text-align: center;
+    color:#4293D8;
+    font-size:28px;
+}

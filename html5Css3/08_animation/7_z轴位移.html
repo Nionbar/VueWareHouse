@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            默认情况下浏览器是不开启透视的，开启透视的徐在html标签内添加perspective属性
+        */
+        
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color:#bfa;
+            margin: 200px auto;
+            transition:transform 0.3s;
+        }
+        body{
+            perspective: 800px;
+            border: 1px solid red
+        }
+        body:hover .box1{
+            /* background-color: #fff; */
+            /* transform: rotateY(180deg); */
+            transform: translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
