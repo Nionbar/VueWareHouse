@@ -1,0 +1,154 @@
+.top-bar{
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    .container{
+        max-width: 1200px;
+        display: flex;
+        margin: 0 10%;
+        height: 100%;
+        justify-content: space-between;
+        // align-items: center;
+        .left-menu{
+            .nav-tabs{
+                width: 25px;
+                height: 20px;
+                margin:15px 0;
+                // background-color: #bfa;
+                li{
+                    height: 1px;
+                    width:25px;
+                    background-color: #fff;
+                    &:nth-child(2){
+                        margin-top: 9px;
+                    }
+                    &:nth-child(3){
+                        margin-top: 8px;
+                    }
+                }
+                &:hover{
+                    li{
+                        height: 1px;
+                        width:25px;
+                        background-color: #fff;
+                        transform-origin: left center;
+                        &:nth-child(1){
+                            transform:rotate(48deg);
+                            width:25px;
+                        }
+                        &:nth-child(2){
+                            opacity: 0;
+                            margin-top: 9px;
+                        }
+                        &:nth-child(3){
+                            margin-top: 8px;
+                            width:25px;
+                            transform:rotate(-48deg);
+                        }
+                    }
+                }
+            }
+            .nav{
+                display:none;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #000;
+                li{
+                    margin: 0 10%;
+                    width: 80%;
+                    line-height:$height;
+                    height: 40px;
+                    border-bottom: 1px solid #eee;
+                    a{
+                        display: block;
+                        width:100%;
+                        text-decoration: none;
+                        color: #fff;
+                        font-size:20px;
+                        // background-color: #bfa;
+                    }
+                    &:first-child{
+                        margin-top:100px;
+                    }
+                    &:last-child{
+                        a{
+                            width:10%;
+                            float: left;
+                        }
+                        span{
+                            float: left;
+                            font-size:20px;
+                            color: #fff;
+                        }
+                    }
+
+                }
+            }
+            &:hover{
+                .nav{
+                    display: block;
+                }
+            }
+        }
+        .logo{
+            margin-top: 10px;
+            a{
+                text-decoration: none;
+                font-size:30px;
+                color:red;
+            }
+        }
+        .user{
+            margin-top: 12.5px;
+            a{
+                text-decoration: none;
+                font-size:25px;
+                color:#fff;
+            }
+        }
+    }
+
+    @media only screen {
+        @media (min-width: 768px) {
+            .container{
+                .logo{
+                    order: 1;
+                }
+                .left-menu{
+                    order: 2;
+                    .nav{
+                        display: flex;
+                        // display:block;
+                        position:static;
+                        // background-color: #bfa;
+                        li{
+                            margin: 0;
+                            // background-color: #fca;
+                            border-bottom: none;
+                            &:first-child{
+                                margin-top:0px;
+                            }
+                            &:last-child{
+                                span{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .nav-tabs{
+                        display: none;
+                    }
+                    &:hover .nav{
+                        display: flex;
+                    }
+                }
+                .user{
+                    order: 3;
+                }
+            }
+        }
+    }
+}

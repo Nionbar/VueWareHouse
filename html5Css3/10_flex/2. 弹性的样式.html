@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+    <style>
+        ul{
+            width: 800px;
+            height: 600px;
+            display:flex;
+            background-color: #000;
+            justify-content: center;
+            align-items: center;
+            /* 
+                justify-content: 用于决定主轴上的元素分布方式
+                    flex-start    默认值，主轴方向的开始位置
+                    flex-end      主轴方向的结束位置
+                    center        主轴方向的中间位置
+                    space-between 空白分布到元素两侧
+                    space-around  空白均匀分布到元素间
+                    space-evenly  空白分不到元素的单列
+            */
+
+            /* 
+                align-item 用于决定侧轴上的元素分布方式
+                    stretch    默认值，将元素的长度设置为相同的值
+                    flex-start 元素不会拉伸，沿着沿着侧轴起边对齐
+                    flex-end   元素不会拉伸，沿着侧轴终边对齐
+                    center     居中对齐
+                    baseline   基线对齐
+            */
+        }
+        ul li{
+            background-color: #bfa;
+            width: 200px;
+            height: 200px;
+            font-size: 100px;
+            /* 
+                flex 的样式
+                    flex-grow 指定弹性元素的伸展系数
+                    flex-shrink 指定弹性元素的收缩系数
+                    flex-basis 指定弹性元素的初始长度
+                        默认情况下就是元素的width
+                
+                flex的简写
+                    flex: 1 1 auto = flex:auto;
+                    flex: 0 1 auto = flex:initial;
+                    flex: 0 0 auto = flex:none;
+            */
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto; */
+            flex: auto;
+            /* 
+                order:可以影响弹性元素的排列顺序
+                    值越小，排列越靠前
+            */
+            order: 1;
+        }
+        ul li:nth-child(2){
+            background-color: #fca;
+            order: 3;
+        }
+        ul li:nth-child(3){
+            background-color: #abc;
+            order: 2;
+        }
+    </style>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+</html>
